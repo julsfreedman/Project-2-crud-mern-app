@@ -8,11 +8,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 
-
-
-//DB configs
 mongoose
-  //.connect("mongodb://localhost:27017/mypostsDB")
   .connect("mongodb+srv://julsfreedman:Fr1sc0D1es3l@cycle-30-cluster.4picfrb.mongodb.net/Project-2-crud-mern-app?retryWrites=true&w=majority")
   .catch((err) => console.log(err));
 

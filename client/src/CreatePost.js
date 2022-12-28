@@ -62,9 +62,16 @@ function CreatePost() {
       <Button
         onClick={() => navigate("posts")}
         variant="outline-success"
-        style={{ width: "100%" }}
+        style={{ width: "100%", marginBottom: "1rem" }}
       >
         ALL POSTS
+      </Button>
+      <Button
+        onClick={() => navigate("/")}
+        variant="outline-success"
+        style={{ width: "100%" }}
+      >
+        HOME PAGE
       </Button>
     </div>
   );
