@@ -50,8 +50,8 @@ function Posts() {
     handleShow();
   };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setUpdatedPost((prev) => {
       return {
         ...prev,

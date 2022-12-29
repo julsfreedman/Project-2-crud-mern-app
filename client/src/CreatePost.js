@@ -10,8 +10,8 @@ function CreatePost() {
     description: "",
   });
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setPost((prev) => {
       return {
         ...prev,
@@ -20,8 +20,8 @@ function CreatePost() {
     });
   };
 
-  const createPost = (e) => {
-    e.preventDefault();
+  const createPost = (event) => {
+    event.preventDefault();
 
     axios
       .post("/create", post)
