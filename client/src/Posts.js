@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
-import Modal from "react-bootstrap/Modal";
+import Modal from "react-bootstrap/Modal";   
 
 function Posts() {
   const navigate = useNavigate();
