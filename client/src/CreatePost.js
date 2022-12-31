@@ -2,12 +2,14 @@ import { Form, Button } from "react-bootstrap";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Nav from "./components/Nav.js"
+import Footer from './components/Footer';
 
 function CreatePost() {
   const navigate = useNavigate();
   const [post, setPost] = useState({
-    title: "",
-    description: "",
+    task: "",
+    dueby: "",
   });
 
   const handleChange = (event) => {
@@ -32,48 +34,37 @@ function CreatePost() {
   };
 
   return (
-    <div style={{ textAlign: "center", width: "90%", margin: "auto auto" }}>
-      <h1>Create post page</h1>
-      <Form>
-        <Form.Group>
-          <Form.Control
-            name="title"
-            value={post.title}
-            onChange={handleChange}
-            style={{ marginBottom: "1rem" }}
-            placeholder="title"
-          />
-          <Form.Control
-            onChange={handleChange}
-            name="description"
-            value={post.description}
-            style={{ marginBottom: "1rem" }}
-            placeholder="description"
-          />
-        </Form.Group>
-        <Button
-          onClick={createPost}
-          variant="outline-success"
-          style={{ width: "100%", marginBottom: "1rem" }}
-        >
-          CREATE POST
-        </Button>
-      </Form>
-      <Button
-        onClick={() => navigate("posts")}
-        variant="outline-success"
-        style={{ width: "100%", marginBottom: "1rem" }}
-      >
-        ALL POSTS
-      </Button>
-      <Button
-        onClick={() => navigate("/")}
-        variant="outline-success"
-        style={{ width: "100%" }}
-      >
-        HOME PAGE
-      </Button>
-    </div>
+    <>
+      <Nav />
+      <div style={{ textAlign: "center", width: "90%", margin: "auto auto" }}>
+        <h1>Add Task</h1>
+        <Form>
+          <Form.Group>
+            <Form.Control
+              name="task"
+              value={post.task}
+              onChange={handleChange}
+              style={{ marginBottom: "1rem" }}
+              placeholder="task"
+            />
+            <Form.Control
+              onChange={handleChange}
+              name="dueby"
+              value={post.dueby}
+              style={{ marginBottom: "1rem" }}
+              placeholder="due by"
+            />
+          </Form.Group>
+          <Button
+            onClick={createPost}
+            variant="dark"
+          >
+            CREATE TASK
+          </Button>
+        </Form>
+      </div>
+      <Footer />
+    </>
   );
 }
 

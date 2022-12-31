@@ -1,21 +1,30 @@
 import "./App.css";
 import { Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import myGif from './productivity-quotes-Bruce-Lee-final.gif'
 
 function App() {
   const navigate = useNavigate();
 
   return (
     <div className="App">
-      <h1>Home page</h1>
+      <Nav />
+      <>
+        <h1 style={{ fontFamily: "sans-serif", fontWeight: "800" }}>To Do List</h1>
+      </>
+      <img src={myGif} alt="my-gif" style={{ borderRadius: "20px" }} /><br />
       <Button
-        variant="outline-success"
-        style={{ width: "90%" }}
+        variant="dark"
+        size="lg"
+        style={{ marginTop: "1rem" }}
         onClick={() => navigate("create")}
       >
-        NEXT
+        Get Started
       </Button>
-    </div>
+      <Footer />
+    </div >
   );
 }
 

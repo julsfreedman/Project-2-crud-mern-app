@@ -15,8 +15,8 @@ mongoose
 
 //data schema
 const postSchema = mongoose.Schema({
-  title: String,
-  description: String,
+  task: String,
+  dueby: String,
 });
 
 //data model
@@ -30,8 +30,8 @@ app.get("/", (req, res) => {
 //create route
 app.post("/create", (req, res) => {
   const newPost = new Post({
-    title: req.body.title,
-    description: req.body.description,
+    task: req.body.task,
+    dueby: req.body.dueby,
   });
 
   newPost
@@ -60,8 +60,8 @@ app.put("/update/:id", (req, res) => {
   Post.findByIdAndUpdate(
     { _id: req.params.id },
     {
-      title: req.body.title,
-      description: req.body.description,
+      task: req.body.task,
+      dueby: req.body.dueby,
     }
   )
     .then((doc) => console.log(doc))

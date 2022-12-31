@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Button, Form } from "react-bootstrap";
-import Modal from "react-bootstrap/Modal";   
+import Modal from "react-bootstrap/Modal";
+import Nav from "./components/Nav.js"
+import Footer from './components/Footer';
 
 function Posts() {
-  const navigate = useNavigate();
   const [posts, setPosts] = useState([]);
   const [updatedPost, setUpdatedPost] = useState({
     id: "",
-    title: "",
-    description: "",
+    task: "",
+    dueby: "",
   });
   const [show, setShow] = useState(false);
 
@@ -38,13 +38,13 @@ function Posts() {
     window.location.reload();
   };
 
-  const updatePost = (id, title, description) => {
+  const updatePost = (id, task, dueby) => {
     setUpdatedPost((prev) => {
       return {
         ...prev,
         id: id,
-        title: title,
-        description: description,
+        task: task,
+        dueby: dueby,
       };
     });
     handleShow();
@@ -73,91 +73,88 @@ function Posts() {
   };
 
   return (
-    <div style={{ width: "90%", margin: "auto auto", textAlign: "center" }}>
-      <h1>Posts page</h1>
-      <Button
-        variant="outline-dark"
-        style={{ width: "100%", marginBottom: "1rem" }}
-        onClick={() => navigate(-1)}
-      >
-        BACK
-      </Button>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Update a post</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form.Control
-            placeholder="title"
-            name="title"
-            value={updatedPost.title ? updatedPost.title : ""}
-            style={{ marginBottom: "1rem" }}
-            onChange={handleChange}
-          />
-          <Form.Control
-            placeholder="description"
-            name="description"
-            onChange={handleChange}
-            value={updatedPost.description ? updatedPost.description : ""}
-          />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={saveUpdatedPost}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-      {posts ? (
-        <>
-          {posts.map((post) => {
-            return (
-              <div
-                style={{
-                  marginBottom: "1rem",
-                  border: "solid lightgray 1px",
-                  borderRadius: "8px",
-                }}
-                key={post._id}
-              >
-                <h4>{post.title}</h4>
-                <p>{post.description}</p>
+    <>
+      <Nav />
+      <div style={{ width: "90%", margin: "auto auto", textAlign: "center" }}>
+        <h1 style={{ padding: "0.7em" }}>To Do List</h1>
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Update a task</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form.Control
+              placeholder="task"
+              name="task"
+              value={updatedPost.task ? updatedPost.task : ""}
+              style={{ marginBottom: "1rem" }}
+              onChange={handleChange}
+            />
+            <Form.Control
+              placeholder="dueby"
+              name="dueby"
+              onChange={handleChange}
+              value={updatedPost.dueby ? updatedPost.dueby : ""}
+            />
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={saveUpdatedPost}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+        {posts ? (
+          <>
+            {posts.map((post) => {
+              return (
                 <div
                   style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-
-                    padding: "1rem",
+                    marginBottom: "1rem",
+                    border: "solid lightgray 1px",
+                    borderRadius: "8px",
                   }}
+                  key={post._id}
                 >
-                  <Button
-                    variant="outline-info"
-                    onClick={() =>
-                      updatePost(post._id, post.title, post.description)
-                    }
-                    style={{ width: "100%", marginRight: "1rem" }}
+                  <h4 style={{ marginTop: "1rem" }}>{post.task}</h4>
+                  <p>{post.dueby}</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+
+                      padding: "1rem",
+                    }}
                   >
-                    UPDATE
-                  </Button>
-                  <Button
-                    onClick={() => deletePost(post._id)}
-                    variant="outline-danger"
-                    style={{ width: "100%" }}
-                  >
-                    DELETE
-                  </Button>
+                    <Button
+                      variant="outline-info"
+                      onClick={() =>
+                        updatePost(post._id, post.task, post.dueby)
+                      }
+                      style={{ width: "100%", marginRight: "1rem" }}
+                    >
+                      UPDATE
+                    </Button>
+                    <Button
+                      onClick={() => deletePost(post._id)}
+                      variant="outline-danger"
+                      style={{ width: "100%" }}
+                    >
+                      DELETE
+                    </Button>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </>
-      ) : (
-        ""
-      )}
-    </div>
+              );
+            })}
+          </>
+        ) : (
+          ""
+        )}
+      </div>
+      <Footer />
+    </>
   );
 }
 
