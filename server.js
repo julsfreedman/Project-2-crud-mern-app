@@ -2,6 +2,9 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 
+// Always require and configure near the top
+require('dotenv').config()
+
 //config
 const app = express();
 app.use(express.json());
@@ -10,7 +13,7 @@ app.use(cors());
 
 //connect to mongodb
 mongoose
-  .connect("mongodb+srv://julsfreedman:Fr1sc0D1es3l@cycle-30-cluster.4picfrb.mongodb.net/Project-2-crud-mern-app?retryWrites=true&w=majority")
+  .connect(process.env.DATABASE_URL)
   .catch((err) => console.log(err));
 
 //data schema

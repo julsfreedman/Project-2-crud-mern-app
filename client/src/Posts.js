@@ -75,8 +75,8 @@ function Posts() {
   return (
     <>
       <Nav />
+      <h1 style={{ padding: "0.7em", width: "90%", margin: "auto auto", textAlign: "center", fontFamily: "sans-serif", fontWeight: "800" }}>To Do List</h1>
       <div style={{ width: "90%", margin: "auto auto", textAlign: "center" }}>
-        <h1 style={{ padding: "0.7em" }}>To Do List</h1>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Update a task</Modal.Title>
@@ -112,8 +112,9 @@ function Posts() {
                 <div
                   style={{
                     marginBottom: "1rem",
-                    border: "solid lightgray 1px",
+                    border: "solid black 2px",
                     borderRadius: "8px",
+                    backgroundColor: "#fff"
                   }}
                   key={post._id}
                 >
@@ -129,7 +130,7 @@ function Posts() {
                     }}
                   >
                     <Button
-                      variant="outline-info"
+                      variant="secondary"
                       onClick={() =>
                         updatePost(post._id, post.task, post.dueby)
                       }
@@ -139,7 +140,7 @@ function Posts() {
                     </Button>
                     <Button
                       onClick={() => deletePost(post._id)}
-                      variant="outline-danger"
+                      variant="dark"
                       style={{ width: "100%" }}
                     >
                       DELETE

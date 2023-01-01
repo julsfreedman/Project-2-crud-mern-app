@@ -36,8 +36,8 @@ function CreatePost() {
   return (
     <>
       <Nav />
-      <div style={{ textAlign: "center", width: "90%", margin: "auto auto" }}>
-        <h1>Add Task</h1>
+      <div style={{ textAlign: "center", width: "90%", margin: "auto auto", fontFamily: "sans-serif", fontWeight: "800" }}>
+        <h1 style={{ fontFamily: "sans-serif", fontWeight: "800" }}>Add Task</h1>
         <Form>
           <Form.Group>
             <Form.Control
