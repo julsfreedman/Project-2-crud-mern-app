@@ -27,9 +27,9 @@ const postSchema = mongoose.Schema({
 const Post = mongoose.model("Post", postSchema);
 
 
-// app.get("/", (req, res) => {
-//   res.send("express is here");
-// });
+app.get("/", (req, res) => {
+  res.send("express is here");
+});
 
 //create route
 app.post("/create", (req, res) => {
