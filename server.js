@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 // Always require and configure near the top
 require('dotenv').config()
+const path = require('path');
 
 //config
 const app = express();
@@ -26,9 +27,9 @@ const postSchema = mongoose.Schema({
 const Post = mongoose.model("Post", postSchema);
 
 
-app.get("/", (req, res) => {
-  res.send("express is here");
-});
+// app.get("/", (req, res) => {
+//   res.send("express is here");
+// });
 
 //create route
 app.post("/create", (req, res) => {

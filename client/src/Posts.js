@@ -76,7 +76,7 @@ function Posts() {
     <>
       <Nav />
       <h1 style={{ padding: "0.7em", width: "90%", margin: "auto auto", textAlign: "center", fontFamily: "sans-serif", fontWeight: "800" }}>To Do List</h1>
-      <div style={{ width: "90%", margin: "auto auto", textAlign: "center" }}>
+      <div style={{ width: "50%", margin: "auto auto", textAlign: "center" }}>
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Update a task</Modal.Title>
