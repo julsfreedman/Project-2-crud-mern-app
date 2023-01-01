@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prod-build": "cd client && npm i && npm run build",
-    "prod-start": "cd Project-2-crud-mern-app && node server.js"
+    "prod-start": "node server.js"
   },
   "eslintConfig": {
     "extends": [
