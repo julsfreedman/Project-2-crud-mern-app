@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install  && cd ../client && npm install && npm run build",
     "start": "node server.js",
-    "prod-build": "npm i && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prod-build": "npm install  && cd ../client && npm install && npm run build",
     "prod-start": "node server.js"
   },
   "author": "",
