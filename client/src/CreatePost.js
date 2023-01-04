@@ -30,7 +30,7 @@ function CreatePost() {
       .then((res) => console.log(res))
       .catch((err) => console.log(err));
 
-    navigate("posts");
+    navigate("/create/posts");
   };
 
   return (
