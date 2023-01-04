@@ -46,6 +46,7 @@ function CreatePost() {
               onChange={handleChange}
               style={{ marginBottom: "1rem" }}
               placeholder="task"
+              as="textarea" rows={3}
             />
             <Form.Control
               onChange={handleChange}
@@ -53,6 +54,7 @@ function CreatePost() {
               value={post.dueby}
               style={{ marginBottom: "1rem" }}
               placeholder="due by"
+              type="datetime-local"
             />
           </Form.Group>
           <Button
