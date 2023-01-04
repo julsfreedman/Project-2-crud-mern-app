@@ -22,7 +22,7 @@ function Nav() {
                             <li className="nav-item">
                                 <a className="nav-link active" aria-current="page" href="/">Home</a>
                             </li>
-                            <li className="nav-item"><a className="nav-link" href="/create">Add Task</a></li>
+                            <li className="nav-item"><a className="nav-link" href="/createPost">Add Task</a></li>
                             <li className="nav-item"><a className="nav-link" href="/create/posts">To Do List</a></li>
                         </ul>
                     </div>
