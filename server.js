@@ -68,7 +68,7 @@ app.put("/update/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/*", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"))
 })
 
