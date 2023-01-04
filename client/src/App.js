@@ -19,7 +19,7 @@ function App() {
         variant="dark"
         size="lg"
         style={{ marginTop: "1rem" }}
-        onClick={() => navigate("create")}
+        onClick={() => navigate("createPost")}
       >
         Get Started
       </Button>

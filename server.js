@@ -27,10 +27,6 @@ const postSchema = mongoose.Schema({
 const Post = mongoose.model("Post", postSchema);
 
 
-app.get("/", (req, res) => {
-  res.send("express is here");
-});
-
 //create route
 app.post("/create", (req, res) => {
   const newPost = new Post({
@@ -72,6 +68,9 @@ app.put("/update/:id", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"))
+})
 
 const PORT = process.env.PORT || 3001;
 
