@@ -6,7 +6,7 @@ https://project-2-crud-mern-app.onrender.com
 
 # Project #2: The Full Stack MERN App
 
-A working full-stack application using the MERN stack: Node.js, MongoDB/Mongoose, Express and React with full CRUD functionalities.
+A working full-stack application using the MERN stack: Node.js, MongoDB/Mongoose, Express and React with full CRUD functionality.
 
 # Technologies Used: </br>
 
@@ -35,6 +35,8 @@ How and which Bootstrap styles you include is up to you, but the simplest way is
 User will be able to mark the priority level of their tasks and sort by category</br>
 User Registration and secure log in</br>
 </br>
+
+![Draft copy of design flow chart](Untitled Diagram.drawio (1).png)
 
 # Getting Started with Create React App
 
