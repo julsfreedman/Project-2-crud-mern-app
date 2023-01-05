@@ -29,6 +29,11 @@ cd into client folder then: npm i axios react-router-dom react-bootstrap bootsra
 {/_ The following line can be included in your src/index.js or App.js file _/}</br>
 import 'bootstrap/dist/css/bootstrap.min.css';</br>
 How and which Bootstrap styles you include is up to you, but the simplest way is to include the latest styles from the CDN: https://react-bootstrap.github.io/ and click on "Get started" and scroll down to CSS and copy the link.
+I used the following bootstrap theme named "small business" for the Nav bar and footer styling:
+
+- Start Bootstrap - Small Business v5.0.5 (https://startbootstrap.com/template/small-business)
+- Copyright 2013-2022 Start Bootstrap
+- Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-small-business/blob/master/LICENSE)
 
 ## Future Endeavors
 
@@ -36,7 +41,7 @@ User will be able to mark the priority level of their tasks and sort by category
 User Registration and secure log in</br>
 </br>
 
-### Rough Draft Design Flow Chart
+### Rough SKetch Design Flow Chart
 
 ![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/113859369/210739578-b0d168cd-3191-44f2-a6b1-a9f89ef50cb0.png)
 </br>
