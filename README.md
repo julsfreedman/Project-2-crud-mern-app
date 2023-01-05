@@ -8,7 +8,7 @@ https://project-2-crud-mern-app.onrender.com
 
 A working full-stack application using the MERN stack: Node.js, MongoDB/Mongoose, Express and React with full CRUD functionality.
 
-# Technologies Used: </br>
+## Technologies Used: </br>
 
 create-react-app (see below for details)</br>
 express</br>
@@ -20,7 +20,7 @@ react-router-dom</br>
 react-bootstrap</br>
 bootstrap</br>
 
-# Let's collaborate! Fork or clone this repository, but don't forget the following steps:
+## Let's collaborate! Fork or clone this repository, but don't forget the following steps:
 
 Assuming you already have Node.js installed in your system (if not, for Windows users, click here for assitance https://nodejs.org/en/)</br>
 npm init -y<br/>
@@ -30,13 +30,17 @@ cd into client folder then: npm i axios react-router-dom react-bootstrap bootsra
 import 'bootstrap/dist/css/bootstrap.min.css';</br>
 How and which Bootstrap styles you include is up to you, but the simplest way is to include the latest styles from the CDN: https://react-bootstrap.github.io/ and click on "Get started" and scroll down to CSS and copy the link.
 
-# Future Endeavors
+## Future Endeavors
 
 User will be able to mark the priority level of their tasks and sort by category</br>
 User Registration and secure log in</br>
 </br>
 
-![Draft copy of design flow chart](Untitled Diagram.drawio (1).png)
+### Rough Draft Design Flow Chart
+
+![Untitled Diagram drawio (1)](https://user-images.githubusercontent.com/113859369/210739578-b0d168cd-3191-44f2-a6b1-a9f89ef50cb0.png)
+</br>
+</br>
 
 # Getting Started with Create React App
 
