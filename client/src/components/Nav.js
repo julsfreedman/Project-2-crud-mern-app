@@ -5,7 +5,7 @@ function Nav() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div className="container px-5">
-                    <h1 className="navbar-brand">MY TO DO LIST</h1>
+                    <h1 className="navbar-brand">Taking Care of Business</h1>
                     <button
                         className="navbar-toggler"
                         type="button"

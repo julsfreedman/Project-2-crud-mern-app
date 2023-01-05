@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Nav />
       <>
-        <h1 style={{ fontFamily: "sans-serif", fontWeight: "800" }}>To Do List</h1>
+        <h1 style={{ fontFamily: "sans-serif", fontWeight: "800" }}>TCOB</h1>
       </>
       <img src={myGif} alt="my-gif" style={{ borderRadius: "20px" }} /><br />
       <Button

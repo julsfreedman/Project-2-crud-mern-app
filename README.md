@@ -1,6 +1,40 @@
-A README.md file with explanations of the technologies used, the approach taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
+# TCOB Website (Taking Care of Business, your own personal To do list)
 
-Have a link to your hosted working app in the README.md file in your github repo
+TCOB is deployed live via Render at the link below:
+
+https://project-2-crud-mern-app.onrender.com
+
+# Project #2: The Full Stack MERN App
+
+A working full-stack application using the MERN stack: Node.js, MongoDB/Mongoose, Express and React with full CRUD functionalities.
+
+# Technologies Used: </br>
+
+create-react-app (see below for details)</br>
+express</br>
+cors</br>
+mongoose</br>
+axios</br>
+react-dom</br>
+react-router-dom</br>
+react-bootstrap</br>
+bootstrap</br>
+
+# Let's collaborate! Fork or clone this repository, but don't forget the following steps:
+
+Assuming you already have Node.js installed in your system (if not, for Windows users, click here for assitance https://nodejs.org/en/)</br>
+npm init -y<br/>
+npm i express cors mongoose </br>
+cd into client folder then: npm i axios react-router-dom react-bootstrap bootsrap</br>
+{/_ The following line can be included in your src/index.js or App.js file _/}</br>
+import 'bootstrap/dist/css/bootstrap.min.css';</br>
+How and which Bootstrap styles you include is up to you, but the simplest way is to include the latest styles from the CDN: https://react-bootstrap.github.io/ and click on "Get started" and scroll down to CSS and copy the link.
+
+# Future Endeavors
+
+User will be able to mark the priority level of their tasks and sort by category</br>
+User Registration and secure log in</br>
+</br>
 
 # Getting Started with Create React App
 
